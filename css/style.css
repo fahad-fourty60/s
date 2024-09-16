@@ -1,0 +1,2865 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+.container {
+  max-width: 1390px;
+  margin: 0px auto;
+  padding: 50px 20px;
+  overflow: hidden;
+}
+
+:root {
+  --primary-color: #0d3a62;
+  /* --secondary-color:; */
+  --accent-nav-color: #deefff;
+  --container-color: #b6dafa;
+  --accent-heading-color: #000000;
+  --accent-para-color: #2b2929;
+}
+
+/* utilites */
+h1 {
+  font-size: 48px;
+  color: var(--accent-heading-color);
+}
+
+h2 {
+  font-size: 32px;
+  color: var(--accent-heading-color);
+}
+
+h3 {
+  font-size: 24px;
+  color: var(--accent-heading-color);
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+  color: var(--accent-heading-color);
+}
+
+p {
+  font-size: 16px;
+  column-gap: var(--accent-para-color);
+}
+
+a {
+  font-size: 16px;
+}
+
+.primary-btn {
+  /* font-size: 15px;
+  padding: 12px 17px;
+  color: #fff;
+  background: var(--primary-color);
+  cursor: pointer;
+  border-radius: 5px; */
+
+  color: #fff;
+  /* width: 130px; */
+  /* height: 40px; */
+  padding: 8px 25px 10px 25px;
+  font-weight: 500;
+  background: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.primary-btn:hover {
+  color: var(--primary-color);
+}
+
+/* 15 */
+.btn-15 {
+  color: #fff;
+  border: 1px solid var(--primary-color);
+  /* box-shadow: 0 0 5px #ff9aff, 0 0 5px #ff9aff inset; */
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.btn-15:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background: #fff;
+  /* box-shadow: 0 0 20px var(--primary-color); */
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.btn-15:hover {
+  color: var(--primary-color);
+}
+
+.btn-15:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.btn-15:active {
+  top: 2px;
+}
+
+/* .primary-btn:hover {
+  background: #fff;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+} */
+.secondary-btn {
+  /* font-size: 15px;
+  padding: 12px 17px;
+  color: var(--primary-color);
+  background: #fff;
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px; */
+
+  color: var(--primary-color);
+  /* width: 130px; */
+  /* height: 40px; */
+  padding: 8px 25px 10px 25px;
+  font-weight: 500;
+  background: #fff;
+  /* border: 1px solid var(--primary-color); */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* 16 */
+.btn-16 {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  /* box-shadow: 0 0 5px #ff9aff, 0 0 5px #ff9aff inset; */
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.btn-16:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background: var(--container-color);
+  box-shadow: 0 0 20px var(--primary-color);
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.btn-16:hover {
+  color: #fff;
+}
+
+.btn-16:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.btn-16:active {
+  top: 2px;
+}
+
+/* .secondary-btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+} */
+
+/* nav section start */
+.header {
+  width: 100%;
+  position: sticky;
+  box-shadow: 2px 2px 5px rgb(197, 196, 196);
+  background-color: #fff;
+  top: 0;
+  z-index: 10;
+  margin-top: 0px;
+}
+
+.header .navcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  max-width: 1280px;
+  align-items: center;
+  text-align: center;
+  margin: 0px auto;
+  padding: 15px 0px;
+}
+
+.header .navcontainer .logo img {
+  /* width: 200px; */
+  margin-left: 4px;
+  width: 100%;
+}
+
+.header .menu .head {
+  display: none;
+}
+
+.header .menu ul {
+  list-style: none;
+  font-weight: 300;
+  margin-right: auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+/* .header .menu ul:hover {
+  color: green;
+  color: #FFF;
+ 
+} */
+
+/* animation end */
+
+.header .menu>ul>li {
+  display: inline-block;
+  font: 20px Raleway;
+  margin: 0px 5px;
+  padding: 10px 10px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+  color: #000;
+}
+
+.header .menu>ul>li>a:hover {
+  color: var(--primary-color);
+}
+
+/* animation start */
+/* Border X get width  */
+li.borderXwidth a:before,
+li.borderXwidth a:after {
+  position: absolute;
+  opacity: 0;
+  width: 0%;
+  height: 2px;
+  content: "";
+  background: var(--primary-color);
+  transition: all 0.3s;
+}
+
+li.borderXwidth a:before {
+  left: 0px;
+  top: 0px;
+}
+
+li.borderXwidth a:after {
+  right: 0px;
+  bottom: 0px;
+}
+
+li.borderXwidth a:hover:before,
+li.borderXwidth a:hover:after {
+  opacity: 1;
+  width: 100%;
+}
+
+/* .header .menu>ul>li>a:hover {
+  color: var(--span-text-color);
+  text-decoration: underline 3px solid;
+  text-underline-offset: 10px;
+} */
+
+.header .menu ul .primary-btn {
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+.header .menu>ul>li:not(:last-child) {
+  /* margin-right: 10px; */
+  margin-right: 0px;
+}
+
+.header .menu .dropdown {
+  position: relative;
+}
+
+.header .menu i {
+  font-size: 10px;
+  pointer-events: none;
+  user-select: none;
+  position: absolute;
+  color: #000;
+  /* left: 105px; */
+  top: calc(50% - 5px);
+}
+
+.header .menu>ul>li>i {
+  /* right: 3px; */
+  right: 12px;
+}
+
+.header .menu .sub-menu {
+  position: absolute;
+  top: 100%;
+
+  width: 250px;
+  padding: 15px 0;
+  background-color: aliceblue;
+  box-shadow: 0 0 5px black;
+  z-index: 1;
+  transform-origin: top;
+  transform: scaleY(0);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.header .menu .sub-menu-right {
+  left: 100%;
+  top: 0;
+}
+
+.header .menu li:hover>.sub-menu {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  transition: all 0.5s ease;
+}
+
+.header .menu .sub-menu a {
+  /* padding: 6px 24px; */
+  padding: 6px 10px;
+}
+
+.header .menu .sub-menu span {
+  color: #000;
+}
+
+.header .menu .sub-menu i {
+  transform: rotate(-90deg);
+  right: 25px;
+}
+
+.header .menu .sub-menu li:hover>a>span {
+  color: green;
+}
+
+.header .menu a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #000;
+  display: block;
+}
+
+.header .menu>ul>li>a {
+  /* padding: 0px 15px 15px 15px; */
+  font-size: 16px;
+  padding-right: 18px;
+}
+
+.header-right {
+  /* display: flex; */
+  display: none;
+  color: #000;
+}
+
+.header-right>* {
+  margin-left: 25px;
+}
+
+.header-right .icon-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  font-size: 16px;
+}
+
+.header-right .open-menu-btn {
+  display: none;
+  border: none;
+}
+
+.header-right .cart-btn {
+  display: none;
+}
+
+.header-right .search-btn {
+  display: none;
+}
+
+/* nav section end */
+/* Aalain css of About page starts here */
+/* About Section starts here */
+.About h2 {
+  font-weight: 500;
+  line-height: 52px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.abt-para {
+  width: 50%;
+}
+
+.div-abt-img {
+  width: 50%;
+}
+
+.div-abt-img img {
+  width: 50%;
+  display: none;
+}
+
+.abt-para-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.abt-bg-img {
+  position: relative;
+}
+
+.abt-bg-img>img {
+  position: absolute;
+  background-position: right;
+  background-repeat: no-repeat;
+  right: 0;
+}
+
+.abt-para-head h3 {
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.abt-para-para p {
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.abt-para-btn .primary-btn {
+  margin-right: 20px;
+}
+
+/* .abt-para-btn a,
+.abt-para-btn i {
+  color: #FFFFFF;
+} */
+
+.abt-para-btn a {
+  text-decoration: none;
+}
+
+.abt-para-btn i {
+  margin-left: 10px;
+  rotate: -50deg;
+}
+
+.secondary-btn i,
+.secondary-btn a {
+  color: var(--primary-color);
+}
+
+.secondary-btn i {
+  rotate: 10deg;
+}
+
+.primary-btn,
+.secondary-btn {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+/* About Section Ends here */
+
+/* Leading section starts here */
+.leading {
+  margin: 100px auto;
+}
+
+.leading-up-text {
+  text-align: center;
+}
+
+.leading-up-text h1 {
+  font-weight: 500;
+  line-height: 52px;
+  letter-spacing: 0.10000000149011612px;
+  margin-bottom: 30px;
+}
+
+.leading-up-text p {
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
+/* card section */
+.main-card {
+  width: 100%;
+  height: auto;
+  padding: 30px 20px;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.card-left {
+  display: flex;
+  width: 50%;
+  padding: 20px;
+  align-items: center;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0px 2px 4px 0px rgba(176, 176, 176, 0.44), 0px 7px 7px 0px rgba(176, 176, 176, 0.38), 0px 16px 9px 0px rgba(176, 176, 176, 0.23), 0px 28px 11px 0px rgba(176, 176, 176, 0.07), 0px 43px 12px 0px rgba(176, 176, 176, 0.01);
+}
+
+.card-img img {
+  width: 80%;
+  height: auto;
+}
+
+.card-img {
+  width: 50%;
+  height: auto;
+}
+
+.card-text {
+  width: 50%;
+  height: auto;
+}
+
+.card-btn {
+  border: 1px solid #0D3A62;
+  border-radius: 50px;
+  width: 150px;
+  padding: 10px;
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 20px;
+
+}
+
+.card-btn i {
+  transform: rotate(315deg);
+}
+
+.card-text h3 {
+  padding-bottom: 20px;
+}
+
+.card-text p {
+  padding-bottom: 20px;
+}
+
+/* card section */
+
+/* Leading section Ends here */
+/* why choose up section starts here  */
+.choose-us {
+  margin-top: 100px;
+}
+
+.choose-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.choose-us-start {
+  background-color: #b6dafa;
+  padding: 30px 50px;
+  text-align: center;
+}
+
+.choose-text h2 {
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.choose-img1 p {
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.top {
+  margin-top: 20px;
+}
+
+/* why choose up section Ends here  */
+/* Sanjay Metal products section starts here */
+.sanjay-products {
+  margin-top: 100px;
+}
+
+.sanjay-products h2 {
+  font-weight: 500;
+  line-height: 52px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+}
+
+.sanjay-cards {
+  margin-top: 50px;
+}
+
+.sanj-card1 {
+  background-image: url("../images/product\ 1.png");
+  height: 406px;
+  width: 413px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 28px;
+}
+
+.sanj-card1-start {
+  position: absolute;
+  background-color: #fff;
+  bottom: 0;
+  border-top-right-radius: 100px;
+  padding: 10px 20px 30px 10px;
+}
+
+.sanj-card1-start h3 {
+  font-weight: 500;
+  line-height: 37px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+}
+
+.sanj-card1-start p {
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.secondary-btn p {
+  color: var(--primary-color);
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.sanjay-cards-flex {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondary-btn i {
+  margin-right: 10px;
+}
+
+.secondary-btn a {
+  text-decoration: none;
+}
+
+/* cards 2 here */
+.sanjay-btn {
+  position: absolute;
+  bottom: 0;
+  left: 109px;
+  top: 381px;
+}
+
+.sanj-card2 {
+  background-image: url("../images/product\ 2.png");
+  height: 406px;
+  width: 413px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 28px;
+}
+
+/* card 3  */
+.sanj-card3 {
+  background-image: url("../images/product\ 3.png");
+  height: 406px;
+  width: 413px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 28px;
+}
+
+.out-btn {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.out-btn i {
+  margin-left: 10px;
+  rotate: -40deg;
+}
+
+.out-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Sanjay Metal products section Ends here */
+/* Request pricing section starts here */
+.req-pricing {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.req-pricing-start {
+  background-color: var(--container-color);
+  padding: 50px;
+}
+
+.req-text h2 {
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0.30000001192092896px;
+  margin-bottom: 15px;
+  color: #353030;
+}
+
+.req-btn {
+  margin-top: 20px;
+}
+
+.req-text h3 {
+  font-family: DM Sans;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0.30000001192092896px;
+  color: #353030;
+  margin-bottom: 35px;
+}
+
+/* .req-btn .primary-btn {
+  border-radius: 50px;
+} */
+
+.req-btn .primary-btn a {
+  text-decoration: none;
+}
+
+.req-btn .primary-btn p {
+  color: white;
+}
+
+.req-btn .primary-btn i {
+  margin-left: 10px;
+}
+
+/* Request pricing section Ends here */
+/* material section starts here  */
+.material {
+  margin-top: 100px;
+}
+
+.material .material-start .material-text h2 {
+  font-weight: 500;
+  line-height: 52px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+}
+
+.materials-card {
+  margin-top: 50px;
+}
+
+.materials-card-flex {
+  display: flex;
+  /* gap: 20px; */
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.materials-card1 {
+  width: 197px;
+  height: 234.61px;
+  background-color: #f5faff;
+  border: 1px solid #0d3a61;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.materials-card-flex .mhover-btn {
+  position: relative;
+  top: 32px;
+  background: #fff;
+  color: var(--primary-color);
+  padding: 5px 30px;
+  border: 1px solid var(--primary-color);
+  border-radius: 20px;
+  display: none;
+}
+
+.materials-card1 .mhover-btn i {
+  transform: rotate(-45deg);
+}
+
+.materials-card1:hover>.mhover-btn {
+  display: inline;
+}
+
+.square {
+  margin: 30px auto;
+  width: 93.79px;
+  height: 93.79px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  rotate: 48deg;
+  background-color: #e0f0ff;
+}
+
+.sq-img {
+  rotate: 123deg;
+}
+
+.sq-img img {
+  margin-bottom: -14px;
+  margin-left: -5px;
+}
+
+.sq-text a {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 37px;
+  letter-spacing: 0.10000000149011612px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.sq-img2 {
+  rotate: 323deg;
+}
+
+.sq-img3 {
+  rotate: 307deg;
+}
+
+.sq-img3 img {
+  margin-top: -13px;
+  margin-left: -8px;
+}
+
+/* material section Ends here  */
+/* From India To other countries starts here */
+.india-bg {
+  margin-top: 100px;
+}
+
+.india-bg-up-text {
+  margin-bottom: -4px;
+}
+
+.india-bg-up-text h2 {
+  font-weight: 500;
+  line-height: 52px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: center;
+  color: var(--accent-heading-color);
+}
+
+.india-bg-up-text p {
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #737373;
+}
+
+.bg-globe {
+  background-image: url("/images/globe.png");
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.list {
+  margin-bottom: 31px;
+}
+
+.list-text p {
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  color: #1e1e1e;
+}
+
+.list-start-flex {
+  display: flex;
+  gap: 5px;
+}
+
+.bg-globe-flex {
+  display: flex;
+}
+
+.bg-globe-flex {
+  margin: 0 auto;
+  gap: 58px;
+  width: 800px;
+}
+
+.ship {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.ship-up {
+  margin-top: 50px;
+}
+
+.ship-up p {
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.ship-up a {
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #2f2f2f;
+}
+
+.ship-down img {
+  margin-top: -88px;
+}
+
+.list-all {
+  margin-top: 50px;
+}
+
+/* From India To other countries Ends here */
+
+/* Sanjay metal is loved and trusted by thousands starts here */
+.sanjay-metal {
+  margin-top: 50px;
+}
+
+.sanjay-start h2 {
+  font-weight: 500;
+  line-height: 52px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: center;
+}
+
+.sanjay-metal-img {
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 102px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #e7e7e7;
+  flex-wrap: wrap;
+}
+
+/* Sanjay metal is loved and trusted by thousands Ends here */
+/* contact section starts here  */
+
+.contact-support-starts-flex {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.contact-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-left {
+  width: 50%;
+  padding: 20px 40px;
+  box-shadow: 0px 8px 25px 0px #00000026;
+}
+
+.contact-right {
+  padding: 51px 40px;
+  box-shadow: 0px 8px 25px 0px #00000026;
+  width: 50%;
+}
+
+.contact-s {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 52px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: center;
+}
+
+.contact-left h2 {
+  color: var(--accent-heading-color);
+}
+
+.contact-left h2 span {
+  /* margin: 0; */
+  -webkit-text-stroke: 1px var(--primary-color);
+  color: transparent;
+}
+
+.email-phone {
+  margin-bottom: 32px;
+}
+
+.email-phone-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.email-phone-flex .email p {
+  font-weight: 400;
+  line-height: 37px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+  color: #706b6b;
+}
+
+.email-phone-flex .email a {
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 37px;
+  letter-spacing: 0.10000000149011612px;
+  color: var(--primary-color);
+}
+
+.contact-address p {
+  margin-bottom: 5px;
+  font-weight: 400;
+  line-height: 37px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+}
+
+.contact-address a {
+  font-weight: 500;
+  line-height: 37px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+  color: var(--primary-color);
+}
+
+.contact-text p {
+  font-weight: 400;
+  line-height: 37px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+  color: #706b6b;
+}
+
+.contact-text textarea {
+  background-color: #e9f5ff;
+  border: none;
+  resize: none;
+  border-bottom: 1px solid var(--primary-color);
+  width: 100%;
+}
+
+.form-btn {
+  margin-top: 79px;
+  /* margin-bottom: 50PX; */
+}
+
+/* contact
+ section Ends here */
+/* invisble section starts here */
+.india-bgs {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: none;
+}
+
+.india-bg-up-texts {
+  margin-bottom: -4px;
+}
+
+.india-bg-up-texts h2 {
+  font-weight: 500;
+  line-height: 52px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: center;
+  color: var(--accent-heading-color);
+}
+
+.india-bg-up-texts p {
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #737373;
+}
+
+.bg-globes {
+  background-image: url("/images/globe.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.lists {
+  margin-bottom: 31px;
+}
+
+.list-texts p {
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  color: #1e1e1e;
+}
+
+.list-start-flexs {
+  display: flex;
+  gap: 5px;
+}
+
+.bg-globe-flexs {
+  display: flex;
+  margin: 0 auto;
+  /* gap: 58px; */
+  justify-content: space-around;
+  /* width: 800px; */
+}
+
+/* .bg-globe-flex {
+} */
+
+.ships {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.ship-ups {
+  margin-top: -55px;
+}
+
+.ship-ups p {
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.ship-ups a {
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #2f2f2f;
+}
+
+.ship-downs {
+  margin-top: -88px;
+  width: 100%;
+}
+
+/* Aalain css of About page Ends here */
+
+/* contact page start */
+/* contact-section start */
+.contact-section {
+  width: 100%;
+}
+
+.contact-section img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  height: 700px;
+}
+
+.contact-section .contact-all {
+  /* width: 1134px; */
+  max-width: 1134px;
+
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  position: relative;
+  z-index: 2;
+  /* top: -618px; */
+  /* left: 19%; */
+  bottom: 620px;
+}
+
+.contact-section .contact-all .contact-top h1 {
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: center;
+}
+
+.contact-section .contact-all .contact-top h3 {
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.contact-section .contact-all .contact-form {
+  border-radius: 10px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  padding: 40px;
+  margin-top: 30px;
+  background: #fff;
+}
+
+.contact-section .contact-all .contact-form h3 {
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.contact-section .contact-all .contact-form form {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.contact-section .contact-all .contact-form form label {
+  width: 100%;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: left;
+  color: #666666;
+  padding-top: 20px;
+}
+
+.contact-section .contact-all .contact-form form input {
+  width: 100%;
+  /* height: 40px; */
+  border: 1px solid #c8c8c8;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-top: 15px;
+  margin-bottom: 30px;
+}
+
+.contact-section .contact-all .contact-form .con-input {
+  display: flex;
+  gap: 30px;
+}
+
+.contact-section .contact-all .contact-form .con-input .inputs {
+  width: 100%;
+}
+
+.contact-section .contact-all .contact-form form input::placeholder {
+  font-family: DM Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #292020;
+}
+
+.contact-section .contact-all .contact-form .con-text textarea {
+  width: 100%;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: left;
+  color: #666666;
+}
+
+.contact-section .contact-all .contact-form .con-text textarea {
+  width: 100%;
+}
+
+/* contact-section end */
+
+/* contactclient-sec start */
+.contactclient-sec {
+  width: 100%;
+  margin-top: -600px;
+}
+
+.contactclient-sec h2 {
+  font-weight: 500;
+  line-height: 52px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: center;
+}
+
+.contactclient-sec .card {
+  margin: 30px 0px;
+}
+
+.contactclient-sec .card .card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contactclient-sec .card .card-container .box {
+  width: 300px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  background: var(--accent-nav-color);
+  padding: 30px 10px;
+}
+
+.contactclient-sec .card .card-container .box h3 {
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.contactclient-sec .card .card-container .box a {
+  font-family: DM Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #292020;
+  text-decoration: none;
+}
+
+.contactclient-sec .card .card-container .box img {
+  width: 100%;
+}
+
+/* contactclient-sec end */
+
+/* contactware-sec section start */
+.contactware-sec {
+  width: 100%;
+}
+
+.contactware-sec h2 {
+  font-weight: 500;
+  line-height: 52px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: center;
+}
+
+.contactware-sec .con-ware {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.contactware-sec .con-ware .con-wareleft {
+  width: 60%;
+}
+
+.contactware-sec .con-ware .con-wareleft img {
+  width: 90%;
+}
+
+.contactware-sec .con-ware .conware-right {
+  width: 40%;
+}
+
+.contactware-sec .con-ware .conware-right .warehouse {
+  margin-bottom: 30px;
+}
+
+.contactware-sec .con-ware .conware-right .warehouse h4 {
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: left;
+  color: var(--primary-color);
+}
+
+.contactware-sec .con-ware .conware-right .warehouse a {
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #292020;
+  text-decoration: none;
+}
+
+/* contactware-sec section end*/
+/* contact page end */
+
+/* product page start */
+.proleading-sec {
+  width: 100%;
+}
+
+.proleading-sec h2 {
+  font-weight: 500;
+  line-height: 52px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: center;
+}
+
+.proleading-sec h3 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: center;
+  margin: 30px 0px 50px 0px;
+}
+
+.proleading-sec .card .card-container {
+  display: flex;
+  gap: 30px;
+}
+
+.proleading-sec .card .card-container .box {
+  width: 660px;
+}
+
+.proleading-sec .card .card-container .box img {
+  width: 100%;
+}
+
+/* proexpert-sec start */
+
+.proexpert-sec {
+  text-align: center;
+  padding: 50px 20px;
+  /* background: var(--accent-nav-color); */
+  background: #e1e9f0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.proexpert-sec h2 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.proexpert-sec p {
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.proexpert-sec .allbuttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 25px;
+}
+
+/* proexpert-sec end */
+/* product page end */
+
+/* Top arrow start */
+.top-arrow button {
+  position: relative;
+  /* top: 90%; */
+  color: #000;
+  font-weight: 800;
+  /* float: right; */
+  font-size: 18px;
+  /* float: left; */
+  right: 70px;
+
+  border-radius: 5px;
+  /* margin-right: 50px; */
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  background-color: rgb(255, 255, 255);
+  /* border: 1px solid var(--accent-heading-color); */
+  padding: 16px 20px;
+  cursor: pointer;
+  border: transparent;
+  transition: all 0.3s ease;
+}
+
+.top-arrow a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Top arrow end */
+
+/* about page start from here */
+/* hero section start here */
+
+.hero-section-back {
+  background-position: bottom center;
+  background: linear-gradient(181deg,
+      rgba(0, 0, 0, 0.4) 0.73%,
+      rgba(0, 0, 0, 0.27) 61.28%),
+    linear-gradient(181deg,
+      rgba(0, 0, 0, 0.4) 0.73%,
+      rgba(0, 0, 0, 0.27) 61.28%),
+    url(../images/hero-3.avif), lightgray 50% / cover no-repeat;
+}
+
+.hero-heading {
+  color: #59c5f8;
+  line-height: 97px;
+  font-size: 93px;
+}
+
+.hero-left {
+  width: 50%;
+}
+
+.hero-heading span {
+  color: #fff;
+  -webkit-text-stroke: 2px rgb(27, 43, 66);
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.hero-right-text {
+  display: flex;
+  gap: 50px;
+
+  justify-content: center;
+}
+
+.exper-2 {
+  padding: 40px 20px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);
+}
+
+.exper-2 h2 {
+  color: #0d3a62;
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px;
+  /* 106.25% */
+  letter-spacing: 0.3px;
+}
+
+/* hero section end here */
+.know-about-us {
+  padding: 80px 0px;
+}
+
+.know-about-us h2 {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.about-us-main {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.know-about-left {
+  width: 50%;
+}
+
+.know-about-right {
+  display: flex;
+  justify-content: center;
+}
+
+.know-about-left h3 {
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+.know-first {
+  text-align: center;
+}
+
+.know-about-right h4 {
+  color: var(--primary-color);
+  font-size: 34px;
+}
+
+.know-first-right {
+  text-align: center;
+}
+
+.know-about-left p {
+  line-height: 24px;
+}
+
+/* services  section start */
+.servicess-section {
+  text-align: center;
+  padding: 80px 0px;
+}
+
+.servicess-section h2 {
+  padding-bottom: 15px;
+}
+
+.services-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.servicess-content img {
+  padding-bottom: 10px;
+}
+
+/* servicess section end  */
+
+/* process section start */
+.process-back {
+  margin: 80px 0px;
+  padding: 80px 0px;
+  background: linear-gradient(181deg,
+      rgba(0, 0, 0, 0.4) 0.73%,
+      rgba(0, 0, 0, 0.27) 61.28%),
+    linear-gradient(181deg,
+      rgba(0, 0, 0, 0.4) 0.73%,
+      rgba(0, 0, 0, 0.27) 61.28%),
+    url(../images/process-section.png), lightgray 50% / cover no-repeat;
+}
+
+.process-first-section {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+}
+
+.process-first-section h5 {
+  font-size: 48px;
+  font-weight: 500px;
+  color: #fff;
+  line-height: 58px;
+}
+
+.process-first-section p {
+  color: #fff;
+  line-height: 24px;
+}
+
+.process-first-section hr {
+  width: 250px;
+}
+
+.play-video {
+  padding: 10px;
+  background-color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px auto;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.play-video a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+#myVideo {
+  display: none;
+  width: 100%;
+  height: 315px;
+}
+
+#video-btn {
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.play-video p {
+  color: var(--primary-color);
+}
+
+.play-video i {
+  color: var(--primary-color);
+}
+
+.video-section {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+/* process section end */
+
+/* quality section start  */
+.quality-section {
+  padding: 80px 0px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.quality-left {
+  width: 50%;
+}
+
+.quality-left h5 {
+  font-size: 28px;
+  padding-bottom: 15px;
+}
+
+.quality-left h2 {
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+
+.quality-left h6 {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 400;
+  padding-bottom: 25px;
+}
+
+.quality-para {
+  display: flex;
+  padding-bottom: 15px;
+  gap: 10px;
+}
+
+.quality-para i {
+  font-size: 22px;
+  color: var(--primary-color);
+}
+
+.quality-right {
+  position: right;
+  width: 50%;
+  text-align: right;
+}
+
+.quality-right img {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.quality-right-img {
+  background-image: url(../images/quality-main.png);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+/* quality sectin end */
+
+/* request section start */
+.request-section {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.request-section h2 {
+  padding-bottom: 10px;
+}
+
+.request-section p {
+  padding-bottom: 20px;
+}
+
+.reqest-btn {
+  display: inline-flex;
+  border-radius: 50px;
+  padding: 10px 25px;
+}
+
+.reqest-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.reqest-btn a i {
+  padding-left: 5px;
+}
+
+/* request sectin end */
+
+/* third party start */
+.third-party {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.left-images {
+  display: flex;
+  gap: 40px;
+  padding-top: 20px;
+}
+
+.third-party-first {
+  text-align: center;
+}
+
+/* third party end */
+
+/* phone number section start  */
+.phone-number {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 0px;
+  gap: 70px;
+}
+
+.logo-reverce {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  align-items: center;
+}
+
+.phone-number .phone-right {
+  text-align: start;
+}
+
+.phone-left p {
+  font-size: 20px;
+  padding-bottom: 30px;
+  line-height: 29px;
+}
+
+.phone-left h5 {
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+.phone-middle {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#img1 {
+  width: 278px;
+  height: 278px;
+}
+
+#img2 {
+  width: 333px;
+  height: 28px;
+}
+
+.phone-right h5 {
+  font-size: 18px;
+}
+
+.quality-check {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0px;
+}
+
+/* phone number section end */
+
+/* social medial start */
+.icon-section {
+  text-align: center;
+  font-size: 25px;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 0px;
+}
+
+.social-midea {
+  padding-bottom: 10px;
+}
+
+/* social media end */
+/* last part start */
+.last-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.hr-section {
+  padding-top: 0px;
+}
+
+.last-icon {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #c8c7c7;
+  background: #fff;
+}
+
+/* last  part end */
+
+/* about page end here */
+
+/* product page first section start */
+.propage {
+  margin-top: 30px;
+}
+
+.sanjay-products .product-page {
+  text-align: center;
+}
+
+.sanjay-products .product-page h1 {
+  font-weight: 700;
+  line-height: 61px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.sanjay-products .product-page p {
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: center;
+  color: var(--accent-para-color);
+}
+
+/* product page first section end*/
+/* Aalain Sub product page starts here */
+.sub-main-flex {
+  display: flex;
+  gap: 20px;
+}
+
+.sub-main-left {
+  width: 75%;
+}
+
+.sub-main-right {
+  width: 25%;
+}
+
+/* left side starts here  */
+/* Hero image section starts here */
+.sub-hero-text h1 {
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.eight {
+  font-size: 18px;
+}
+
+.sub-hero-text p {
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: left;
+  color: #666666;
+}
+
+.sub-hero-text>.sub-hero-p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  color: #292020;
+  text-align: left;
+}
+
+.sub-hero-img {
+  margin-top: 10px;
+}
+
+.sub-hero-img-bg {
+  width: 100%;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.sub-hero-img-bg img {
+  width: 100%;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Hero image section Ends here */
+/* about sanjay Flanges starts here */
+
+.about-sanj-flang-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 97%;
+}
+
+.about-sanj-flang-text h2 {
+
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: left;
+  color: #353030;
+}
+
+.about-sanj-flang-text p {
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--accent-para-color);
+}
+
+/* about sanjay Flanges Ends here */
+/* Some our SS Flanges Are leading in market starts here */
+/* .ss-flanges {
+  margin-top: 100px;
+}
+
+.ss-flanges-card {
+  margin-top: 50px;
+}
+
+.ss-flanges-card-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ss-flanges-start h3 {
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--accent-heading-color);
+}
+
+.ss-flanges-card-img {
+  width: 100%;
+}
+
+.ss-flanges-card-img img {
+  width: 100%;
+}
+
+.ss-flanges-card-start {
+  border: 1px solid #B6DAFA;
+  box-shadow: 0px 4px 10px 0px #00000026;
+  padding: 10px 0px;
+}
+
+.ss-flanges-card-text {
+  text-align: center;
+}
+
+.ss-flanges-card-text a {
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  color: var(--accent-heading-color);
+  text-decoration: none;
+} */
+
+/* Some our SS Flanges Are leading in market Ends here */
+/* Are you willing get more details? starts here */
+.sanj-will {
+  margin-top: 100px;
+  width: 95%;
+}
+
+.sanj-will-start {
+  background-image: url('../images/sub-product\ details\ box.png');
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+  padding: 30px 10px;
+  border-radius: 14px;
+}
+
+.sanj-will-in-text {
+  text-align: center;
+}
+
+.sanj-will-in-text h2 {
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0.30000001192092896px;
+  color: #353030;
+  margin-bottom: 25px;
+}
+
+.sanj-will-in-text h3 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0.30000001192092896px;
+  color: #353030;
+}
+
+.sanj-will-in-text>a {
+  margin-top: 39px;
+}
+
+.sanj-will-in-text>a>i {
+  margin-left: 10px;
+}
+
+/* Are you willing get more details? Ends here  */
+/* SS Flanges Specification,
+Size,
+Grades,
+Standards – Characteristics starts here SS Flanges Specification, */
+.specification {
+  margin-top: 100px;
+}
+
+.specification-start h3 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--primary-color);
+}
+
+.specification-start-table {
+  margin-top: 30px;
+}
+
+.specification-start-table table {
+  width: 927px;
+}
+
+.specification-start-table table tr th:nth-child(2) {
+  background-color: #fff;
+  color: #2B2929;
+}
+
+.specification-start-table table>tr,
+td {
+  border: 1px solid #E6E6E6
+}
+
+.specification-start-table table tr th {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  background-color: var(--primary-color);
+  width: 187px;
+  padding-left: 21px;
+}
+
+.specification-start-table table tr td {
+  padding: 10px 15px;
+}
+
+/* Size,
+Grades,
+Standards – Characteristics Ends here */
+/* Stainless Steel Flanges Price List starts here */
+.stan-flange {
+  margin-top: 100px;
+}
+
+.stan-flange-text h3 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--primary-color);
+}
+
+.stan-flange-table {
+  margin-top: 20px;
+
+}
+
+.stan-flange-table table {
+  width: 950px;
+
+}
+
+
+.stan-flange-table table th {
+  border-radius: 1px solid #E6E6E6;
+}
+
+.stan-flange-table table td {
+  border-radius: 1px solid #E6E6E6;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.stan-flange-table table tr th {
+  background-color: #0D3A62;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  padding: 30px 31px;
+}
+
+
+/* Stainless Steel Flanges Price List ends here */
+/* Why buy products from Sanjay metal starts here */
+.why-sanjay {
+  margin-top: 100px;
+}
+
+.why-sanjay-start h3 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--primary-color);
+}
+
+.sanjay-blue {
+  /* background-image: url(../images/sub--product\ blue\ rect.png); */
+  /* height: 250px; */
+  /* width: 100%; */
+  padding: 0px 50px;
+  padding-bottom: 51px;
+  padding-top: 45px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 50px;
+  background-color: #DEEFFF;
+  border-radius: 15px;
+}
+
+.sanjay-blue-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sanjay-blue-text p {
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: var(--accent-para-color);
+}
+
+/* Why buy products from Sanjay metal Ends here */
+/* Types of SS Flanges we manufacturer starts here */
+.type-ss {
+  margin-top: 100px;
+}
+
+.type-ss h3 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--primary-color);
+}
+
+/* flanges card css starts here */
+.flanges-card-down {
+  margin-top: 50px;
+}
+
+.flanges-card-down-start {
+
+  width: 23%;
+}
+
+.flanges-card-down-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.flanges-card-down-text {
+  text-align: center;
+}
+
+.flanges-card-down-text a {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.flanges-card-down-img {
+  width: 89%;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.flanges-card-down-img img {
+  width: 100%;
+}
+
+.flanges-white {
+  border: 1px solid #B6DAFA;
+  box-shadow: 0px 4px 10px 0px #00000026;
+  padding: 10px 10px;
+}
+
+/* Types of SS Flanges we manufacturer ends here */
+/* Connect with our expert Consultation  starts here */
+/* Same css as above in  */
+/* Connect with our expert Consultation  Ends here */
+
+/* ASTM A182 Stainless Steel Flange Chemical Composition starts here  */
+.astm {
+  margin-top: 100px;
+}
+
+.astm h3 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--primary-color);
+}
+
+/* table code starts here */
+.astm-table-starts table tr th {
+  background-color: var(--primary-color);
+  padding: 16px 24px;
+  color: white;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+.astm-table-starts table th {
+  border: 1px solid #E6E6E6;
+}
+
+.astm-table-starts table {
+  width: 90px;
+}
+
+.astm-table-starts table td {
+  padding: 19px 19px;
+}
+
+.astm-table {
+  margin-top: 50px;
+}
+
+/* ASTM A182 Stainless Steel Flange Chemical Composition Ends here  */
+/* We’re not just limited in BHARAT we’re expanding to other countries starts here */
+.limit-bharat {
+  margin-top: 100px;
+}
+
+.limit-bharat h3 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--primary-color);
+}
+
+.limited-img {
+  width: 60%;
+  margin-top: 20px;
+}
+
+.limited-img img {
+  width: 100%;
+}
+
+/* We’re not just limited in BHARAT we’re expanding to other countries Ends here */
+/* Our regular clients countries for Flanges starts here */
+.regular-cont {
+  margin-top: 50px;
+}
+
+.regular-cont h3 {
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: black;
+}
+
+/* small card code starts here */
+.regular-small-cards-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.regular-small-cards-start {
+  background-color: #EFEFEF;
+  padding: 8px 41px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.regular-small-cards {
+  margin-top: 20px;
+}
+
+.regular-text a {
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+  text-decoration: none;
+}
+
+.regular-img {
+  width: 21%;
+}
+
+.regular-img img {
+  width: 114%;
+}
+
+/* .regular-small-cards-starts {
+  background-color: #EFEFEF;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 52px;
+} */
+
+/* Our regular clients countries for Flanges Ends here */
+/* Our Other clients countries for Flanges starts here */
+.client-cont h3 {
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+
+  margin-top: 50px;
+}
+
+/* small card code starts here */
+.regular-small-cards-flex {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* .regular-small-cards-start {
+  background-color: #EFEFEF;
+  padding: 5px 20px;
+  display: flex;
+  /* justify-content: space-between; */
+/* align-items: center;
+  gap: 15px;
+} */
+.regular-small-cards {
+  margin-top: 20px;
+}
+
+/* .regular-text p {
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+} */
+
+.regular-img {
+  width: 21%;
+}
+
+.regular-img img {
+  width: 114%;
+}
+
+/* .regular-small-cards-starts {
+  background-color: #EFEFEF;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 52px;
+} */
+
+/* Our Other clients countries for Flanges Ends here */
+/* Our Local Clients are many part in Baharat starts here */
+.lokal-clients h3 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--primary-color);
+  margin-top: 100px;
+}
+
+.lokal-clients p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--accent-para-color);
+}
+
+/* Our Local Clients are many part in Baharat Ends here */
+/* We Accepting most of types payment starts here  */
+.acept {
+  margin-top: 100px;
+}
+
+.acept h3 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.acept-p {
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--accent-para-color);
+
+}
+
+.accept-cards {
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+}
+
+/* We Accepting most of types payment Ends here  */
+/* We are happy to do business with youstarts here */
+.sanj-will-starts {
+  background-image: url('../images/sub-product\ happy\ business.png');
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+  padding: 30px 10px;
+  border-radius: 20px;
+}
+
+/* We are happy to do business with youEnds here */
+/* Conclusion starts here */
+.conclu {
+  margin-top: 100px;
+}
+
+.conclu h3 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--primary-color);
+}
+
+.conclu p {
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--accent-para-color);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.conclu-box {
+  /* background-image: url('../images/sub-product\ small\ blue.png'); */
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+  padding: 48px 25px;
+  border-radius: 20px;
+  background-color: #DEEFFF;
+}
+
+.conclu-box h3 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: left;
+  color: #353030;
+}
+
+.conclu-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.conclu-box>.primary-btn>i {
+  margin-left: 10px;
+}
+
+/* Conclusion Ends here */
+/* Explore other leading products in stainless steel starts here */
+.ex {
+  margin-top: 50px;
+}
+
+/* Explore other leading products in stainless steel Ends here */
+/* width: 300px; */
+/* height: 260px; */
+
+
+
+
+
+
+
+
+/* Right side form css starts here */
+.form-upper {
+  text-align: center;
+  padding: 12px 7px;
+  background-color: #DEEFFF;
+}
+
+.form-upper h2 {
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: 0.10000000149011612px;
+  color: #000000;
+}
+
+.form-upper p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: center;
+  color: #353030;
+}
+
+.form-starts>form>label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: left;
+}
+
+.form-starts {
+  background-color: #F5F5F5;
+  padding: 29px 20px;
+}
+
+.form-starts form input {
+  width: 100%;
+}
+
+.right-form {
+  box-shadow: 0px 4px 15px 0px #00000026;
+
+}
+
+/* .form-starts form label input{
+border: none;
+} */
+#label {
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: left;
+  color: #666666;
+}
+
+.form-starts input {
+  border: none;
+  border-bottom: 1px solid #C8C8C8;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.forms-btn {
+  text-align: center;
+  margin-top: 30px;
+
+}
+
+.forms-btn>a>i {
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+.forms-btn>a {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.form-starts form ::placeholder {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #292020;
+}
+
+/* Our Quality Products section starts here */
+.sub-form-two {
+  margin-top: 48px;
+}
+
+.sub-form-up {
+  text-align: center;
+  background-color: #DEEFFF;
+}
+
+.sub-form-up h2 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+  color: #000000;
+  padding: 33px 27px;
+}
+
+.sub-form-two-down {
+  background-color: #F5F5F5;
+}
+
+.sub-form-two-down {
+  padding: 38px 39px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.sub-form-two-down>a {
+  color: #222222;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  text-decoration: none;
+}
+
+/* Our Quality Products section Ends here */
+
+
+/* Right side form css Ends here */
